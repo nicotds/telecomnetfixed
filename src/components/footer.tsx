@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router"
+import Link from 'next/link'
 import { Facebook, Instagram } from "lucide-react"
 import { Logo } from "@/components/logo"
 
@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           {/* Logo and Description */}
           <div className="flex flex-col gap-4">
-            <Link to="/" className="inline-flex items-center self-start">
+            <Link href="/" className="inline-flex items-center self-start">
               <Logo size="md" withBackground animated={false} />
             </Link>
             <p className="text-sm text-blue-200">
@@ -21,16 +21,16 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="font-semibold text-lg">Enlaces Rápidos</h3>
             <div className="flex flex-col gap-2">
-              <Link to="/planes" className="text-sm text-blue-200 hover:text-white transition-colors">
+              <Link href="/planes" className="text-sm text-blue-200 hover:text-white transition-colors">
                 Planes
               </Link>
-              <Link to="/acerca-de-nosotros" className="text-sm text-blue-200 hover:text-white transition-colors">
+              <Link href="/acerca-de-nosotros" className="text-sm text-blue-200 hover:text-white transition-colors">
                 Acerca de Nosotros
               </Link>
-              <Link to="/contacto" className="text-sm text-blue-200 hover:text-white transition-colors">
+              <Link href="/contacto" className="text-sm text-blue-200 hover:text-white transition-colors">
                 Contacto
               </Link>
-              <Link to="/normativas" className="text-sm text-blue-200 hover:text-white transition-colors">
+              <Link href="/normativas" className="text-sm text-blue-200 hover:text-white transition-colors">
                 Normativas
               </Link>
               <a 

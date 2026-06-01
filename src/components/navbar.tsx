@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router"
+import Link from 'next/link'
 import { useState } from "react"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -22,7 +22,7 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto flex h-20 md:h-24 items-center justify-between px-4 md:px-6">
-        <Link to="/" className="flex items-center min-w-0 mr-2">
+        <Link href="/" className="flex items-center min-w-0 mr-2">
           <span className="lg:hidden"><Logo size="md" animated /></span>
           <span className="hidden lg:inline-flex"><Logo size="lg" animated /></span>
         </Link>
@@ -40,10 +40,10 @@ export function Navbar() {
               >
                 {link.label}
               </a>
-            ) : (
+              ) : (
               <Link
                 key={link.href}
-                to={link.href}
+                href={link.href}
                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
               >
                 {link.label}
@@ -78,7 +78,7 @@ export function Navbar() {
                 ) : (
                   <Link
                     key={link.href}
-                    to={link.href}
+                    href={link.href}
                     className="text-lg font-medium text-foreground transition-colors hover:text-primary"
                     onClick={() => setIsOpen(false)}
                   >
