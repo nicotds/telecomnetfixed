@@ -39,7 +39,8 @@ const plans = [
     borderHover: "hover:border-slate-300",
     shadowHover: "hover:shadow-slate-200/50",
     icon: Sparkles,
-    tagline: "Ideal para empezar"
+    tagline: "Ideal para empezar",
+    image: "/images/telecom1.jpg"
   },
   { 
     name: "PRIME", 
@@ -53,7 +54,8 @@ const plans = [
     borderHover: "hover:border-blue-300",
     shadowHover: "hover:shadow-blue-200/50",
     icon: Star,
-    tagline: "Para toda la familia"
+    tagline: "Para toda la familia",
+    image: "/images/telecom2.jpg"
   },
   { 
     name: "ULTRA", 
@@ -220,6 +222,19 @@ export default function PlanesPage() {
                   >
                     {/* Top accent bar */}
                     <div className={`h-1.5 w-full ${plan.accentColor}`} />
+                    
+                    {/* Plan image */}
+                    {plan.image && (
+                      <div className="relative w-full h-40 overflow-hidden">
+                        <Image
+                          src={plan.image}
+                          alt={`Robot mascota plan ${plan.name}`}
+                          fill
+                          className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                      </div>
+                    )}
                     
                     {/* Popular badge */}
                     {plan.popular && (
