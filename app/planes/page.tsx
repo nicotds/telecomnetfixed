@@ -225,14 +225,15 @@ export default function PlanesPage() {
                     
                     {/* Plan image */}
                     {plan.image && (
-                      <div className="relative w-full h-40 overflow-hidden">
-                        <Image
-                          src={plan.image}
-                          alt={`Robot mascota plan ${plan.name}`}
-                          fill
-                          className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                      <div className="relative w-full bg-gradient-to-b from-slate-50 to-white p-6 flex items-center justify-center">
+                        <div className="relative w-full h-64">
+                          <Image
+                            src={plan.image}
+                            alt={`Robot mascota plan ${plan.name}`}
+                            fill
+                            className="object-contain object-center group-hover:scale-110 transition-transform duration-500"
+                          />
+                        </div>
                       </div>
                     )}
                     
