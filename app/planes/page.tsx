@@ -33,14 +33,15 @@ const plans = [
     price: "$17,39", 
     popular: false,
     tier: 1,
-    accentColor: "bg-slate-500",
-    accentColorLight: "bg-slate-100",
-    textColor: "text-slate-600",
-    borderHover: "hover:border-slate-300",
-    shadowHover: "hover:shadow-slate-200/50",
+    accentColor: "bg-blue-500",
+    accentColorLight: "bg-blue-50",
+    textColor: "text-blue-600",
+    borderHover: "hover:border-blue-300",
+    shadowHover: "hover:shadow-blue-200/50",
     icon: Sparkles,
     tagline: "Ideal para empezar",
-    image: "/images/telecom1.jpg"
+    image: "/images/starter.jpg",
+    imageBg: "from-blue-50 to-white"
   },
   { 
     name: "PRIME", 
@@ -48,14 +49,15 @@ const plans = [
     price: "$21,74", 
     popular: false,
     tier: 2,
-    accentColor: "bg-blue-500",
-    accentColorLight: "bg-blue-50",
-    textColor: "text-blue-600",
-    borderHover: "hover:border-blue-300",
-    shadowHover: "hover:shadow-blue-200/50",
+    accentColor: "bg-cyan-500",
+    accentColorLight: "bg-cyan-50",
+    textColor: "text-cyan-600",
+    borderHover: "hover:border-cyan-300",
+    shadowHover: "hover:shadow-cyan-200/50",
     icon: Star,
     tagline: "Para toda la familia",
-    image: "/images/telecom2.jpg"
+    image: "/images/prime.jpg",
+    imageBg: "from-cyan-50 to-white"
   },
   { 
     name: "ULTRA", 
@@ -69,7 +71,9 @@ const plans = [
     borderHover: "hover:border-emerald-300",
     shadowHover: "hover:shadow-emerald-200/50",
     icon: Rocket,
-    tagline: "Recomendado"
+    tagline: "Recomendado",
+    image: "/images/ultra.jpg",
+    imageBg: "from-emerald-50 to-white"
   },
   { 
     name: "PRO", 
@@ -77,13 +81,15 @@ const plans = [
     price: "$30,43", 
     popular: false,
     tier: 4,
-    accentColor: "bg-violet-500",
-    accentColorLight: "bg-violet-50",
-    textColor: "text-violet-600",
-    borderHover: "hover:border-violet-300",
-    shadowHover: "hover:shadow-violet-200/50",
+    accentColor: "bg-yellow-500",
+    accentColorLight: "bg-yellow-50",
+    textColor: "text-yellow-600",
+    borderHover: "hover:border-yellow-300",
+    shadowHover: "hover:shadow-yellow-200/50",
     icon: Zap,
-    tagline: "Gaming y streaming"
+    tagline: "Gaming y streaming",
+    image: "/images/pro.jpg",
+    imageBg: "from-yellow-50 to-white"
   },
   { 
     name: "ULTRA PRO", 
@@ -97,7 +103,9 @@ const plans = [
     borderHover: "hover:border-orange-300",
     shadowHover: "hover:shadow-orange-200/50",
     icon: Flame,
-    tagline: "Trabajo desde casa"
+    tagline: "Trabajo desde casa",
+    image: "/images/ultra-pro.jpg",
+    imageBg: "from-orange-50 to-white"
   },
   { 
     name: "PREMIUM PRO", 
@@ -105,13 +113,15 @@ const plans = [
     price: "$43,48", 
     popular: false,
     tier: 6,
-    accentColor: "bg-amber-500",
-    accentColorLight: "bg-amber-50",
-    textColor: "text-amber-600",
-    borderHover: "hover:border-amber-300",
-    shadowHover: "hover:shadow-amber-200/50",
+    accentColor: "bg-purple-500",
+    accentColorLight: "bg-purple-50",
+    textColor: "text-purple-600",
+    borderHover: "hover:border-purple-300",
+    shadowHover: "hover:shadow-purple-200/50",
     icon: Crown,
-    tagline: "Maxima potencia"
+    tagline: "Maxima potencia",
+    image: "/images/premium-pro.jpg",
+    imageBg: "from-purple-50 to-white"
   },
 ]
 
@@ -225,7 +235,7 @@ export default function PlanesPage() {
                     
                     {/* Plan image */}
                     {plan.image && (
-                      <div className="relative w-full bg-gradient-to-b from-slate-50 to-white p-6 flex items-center justify-center">
+                      <div className={`relative w-full bg-gradient-to-b ${plan.imageBg} p-6 flex items-center justify-center`}>
                         <div className="relative w-full h-64">
                           <Image
                             src={plan.image}
