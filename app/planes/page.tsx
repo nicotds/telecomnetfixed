@@ -65,15 +65,15 @@ const plans = [
     price: "$26,09", 
     popular: true,
     tier: 3,
-    accentColor: "bg-amber-500",
-    accentColorLight: "bg-amber-50",
-    textColor: "text-amber-600",
+    accentColor: "bg-amber-400",
+    accentColorLight: "bg-blue-50",
+    textColor: "text-[#1e3a8a]",
     borderHover: "hover:border-amber-400",
     shadowHover: "hover:shadow-amber-200/50",
     icon: Rocket,
     tagline: "Recomendado",
     image: "/images/ultra.jpg",
-    imageBg: "from-amber-50 to-white"
+    imageBg: "from-blue-50 to-white"
   },
   { 
     name: "PRO", 
