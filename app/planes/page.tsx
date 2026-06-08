@@ -33,10 +33,10 @@ const plans = [
     price: "$17,39", 
     popular: false,
     tier: 1,
-    accentColor: "bg-blue-500",
+    accentColor: "bg-[#1e3a8a]",
     accentColorLight: "bg-blue-50",
-    textColor: "text-blue-600",
-    borderHover: "hover:border-blue-300",
+    textColor: "text-[#1e3a8a]",
+    borderHover: "hover:border-[#1e3a8a]/40",
     shadowHover: "hover:shadow-blue-200/50",
     icon: Sparkles,
     tagline: "Ideal para empezar",
@@ -49,15 +49,15 @@ const plans = [
     price: "$21,74", 
     popular: false,
     tier: 2,
-    accentColor: "bg-cyan-500",
-    accentColorLight: "bg-cyan-50",
-    textColor: "text-cyan-600",
-    borderHover: "hover:border-cyan-300",
-    shadowHover: "hover:shadow-cyan-200/50",
+    accentColor: "bg-[#1e3a8a]",
+    accentColorLight: "bg-blue-50",
+    textColor: "text-[#1e3a8a]",
+    borderHover: "hover:border-[#1e3a8a]/40",
+    shadowHover: "hover:shadow-blue-200/50",
     icon: Star,
     tagline: "Para toda la familia",
     image: "/images/prime.jpg",
-    imageBg: "from-cyan-50 to-white"
+    imageBg: "from-blue-50 to-white"
   },
   { 
     name: "ULTRA", 
@@ -65,15 +65,15 @@ const plans = [
     price: "$26,09", 
     popular: true,
     tier: 3,
-    accentColor: "bg-emerald-500",
-    accentColorLight: "bg-emerald-50",
-    textColor: "text-emerald-600",
-    borderHover: "hover:border-emerald-300",
-    shadowHover: "hover:shadow-emerald-200/50",
+    accentColor: "bg-amber-500",
+    accentColorLight: "bg-amber-50",
+    textColor: "text-amber-600",
+    borderHover: "hover:border-amber-400",
+    shadowHover: "hover:shadow-amber-200/50",
     icon: Rocket,
     tagline: "Recomendado",
     image: "/images/ultra.jpg",
-    imageBg: "from-emerald-50 to-white"
+    imageBg: "from-amber-50 to-white"
   },
   { 
     name: "PRO", 
@@ -81,15 +81,15 @@ const plans = [
     price: "$30,43", 
     popular: false,
     tier: 4,
-    accentColor: "bg-yellow-500",
-    accentColorLight: "bg-yellow-50",
-    textColor: "text-yellow-600",
-    borderHover: "hover:border-yellow-300",
-    shadowHover: "hover:shadow-yellow-200/50",
+    accentColor: "bg-[#1e3a8a]",
+    accentColorLight: "bg-blue-50",
+    textColor: "text-[#1e3a8a]",
+    borderHover: "hover:border-[#1e3a8a]/40",
+    shadowHover: "hover:shadow-blue-200/50",
     icon: Zap,
     tagline: "Gaming y streaming",
     image: "/images/pro.jpg",
-    imageBg: "from-yellow-50 to-white"
+    imageBg: "from-blue-50 to-white"
   },
   { 
     name: "ULTRA PRO", 
@@ -97,15 +97,15 @@ const plans = [
     price: "$34,78", 
     popular: false,
     tier: 5,
-    accentColor: "bg-orange-500",
-    accentColorLight: "bg-orange-50",
-    textColor: "text-orange-600",
-    borderHover: "hover:border-orange-300",
-    shadowHover: "hover:shadow-orange-200/50",
+    accentColor: "bg-[#1e3a8a]",
+    accentColorLight: "bg-blue-50",
+    textColor: "text-[#1e3a8a]",
+    borderHover: "hover:border-[#1e3a8a]/40",
+    shadowHover: "hover:shadow-blue-200/50",
     icon: Flame,
     tagline: "Trabajo desde casa",
     image: "/images/ultra-pro.jpg",
-    imageBg: "from-orange-50 to-white"
+    imageBg: "from-blue-50 to-white"
   },
   { 
     name: "PREMIUM PRO", 
@@ -113,15 +113,15 @@ const plans = [
     price: "$43,48", 
     popular: false,
     tier: 6,
-    accentColor: "bg-purple-500",
-    accentColorLight: "bg-purple-50",
-    textColor: "text-purple-600",
-    borderHover: "hover:border-purple-300",
-    shadowHover: "hover:shadow-purple-200/50",
+    accentColor: "bg-[#1e3a8a]",
+    accentColorLight: "bg-blue-50",
+    textColor: "text-[#1e3a8a]",
+    borderHover: "hover:border-[#1e3a8a]/40",
+    shadowHover: "hover:shadow-blue-200/50",
     icon: Crown,
     tagline: "Maxima potencia",
     image: "/images/premium-pro.jpg",
-    imageBg: "from-purple-50 to-white"
+    imageBg: "from-blue-50 to-white"
   },
 ]
 
@@ -227,7 +227,7 @@ export default function PlanesPage() {
                       transition-all duration-300 ease-out
                       hover:-translate-y-2 hover:shadow-xl ${plan.shadowHover}
                       ${plan.borderHover}
-                      ${plan.popular ? "ring-2 ring-emerald-400 shadow-lg shadow-emerald-100" : "shadow-sm"}
+                      ${plan.popular ? "ring-2 ring-amber-400 shadow-lg shadow-amber-100" : "shadow-sm"}
                     `}
                   >
                     {/* Plan image - full width, no cropping, natural aspect ratio */}
@@ -246,7 +246,7 @@ export default function PlanesPage() {
                       )}
                       {/* Popular badge */}
                       {plan.popular && (
-                        <Badge className="absolute top-5 right-4 z-20 bg-emerald-500 hover:bg-emerald-500 text-white text-xs font-medium shadow-md">
+                        <Badge className="absolute top-5 right-4 z-20 bg-amber-500 hover:bg-amber-500 text-white text-xs font-medium shadow-md">
                           Recomendado
                         </Badge>
                       )}
