@@ -230,29 +230,27 @@ export default function PlanesPage() {
                       ${plan.popular ? "ring-2 ring-emerald-400 shadow-lg shadow-emerald-100" : "shadow-sm"}
                     `}
                   >
-                    {/* Top accent bar */}
-                    <div className={`h-1.5 w-full ${plan.accentColor}`} />
-                    
-                    {/* Plan image */}
-                    {plan.image && (
-                      <div className={`relative w-full h-96 bg-gradient-to-b ${plan.imageBg} flex items-center justify-center px-6`}>
+                    {/* Plan image - full width, no cropping, natural aspect ratio */}
+                    <div className="relative w-full">
+                      {/* Accent bar on top */}
+                      <div className={`absolute top-0 left-0 right-0 h-1.5 ${plan.accentColor} z-10`} />
+                      {plan.image && (
                         <Image
                           src={plan.image}
                           alt={`Robot mascota plan ${plan.name}`}
-                          width={350}
-                          height={350}
-                          className="object-contain group-hover:scale-110 transition-transform duration-500"
+                          width={600}
+                          height={900}
+                          className="w-full h-auto block group-hover:scale-105 transition-transform duration-500 origin-top"
                           priority
                         />
-                      </div>
-                    )}
-                    
-                    {/* Popular badge */}
-                    {plan.popular && (
-                      <Badge className="absolute top-5 right-4 z-20 bg-emerald-500 hover:bg-emerald-500 text-white text-xs font-medium shadow-md">
-                        Recomendado
-                      </Badge>
-                    )}
+                      )}
+                      {/* Popular badge */}
+                      {plan.popular && (
+                        <Badge className="absolute top-5 right-4 z-20 bg-emerald-500 hover:bg-emerald-500 text-white text-xs font-medium shadow-md">
+                          Recomendado
+                        </Badge>
+                      )}
+                    </div>
                     
                     {/* Decorative background elements */}
                     <div className="pointer-events-none absolute inset-0 overflow-hidden">
